@@ -74,8 +74,8 @@ def login(request):
 
 def sendmail():
         global otp,roadnm,email,password
-        from_email = 'hackathon344+noreply@gmail.com'
-        password = 'idiy xlrh vqzu omfd'
+        from_email = 'generativegenz@gmail.com'
+        password = 'fzpp lciy sndd mado'
         subject="One Time Password For Admin "
         length=8
         alphanumeric_characters = string.ascii_letters + string.digits

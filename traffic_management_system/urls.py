@@ -1,8 +1,8 @@
 """
-URL configuration for traffic_management_system project.
+URL configuration for adminpanel project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
+    https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -19,5 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('admin_panel.urls')),
+    path('system-admin/',include('admin_panel.urls')),
+    path('super-admin/',include('super_admin.urls')),
+    path('',include('admin_panel.urls'))
+
 ]

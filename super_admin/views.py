@@ -32,7 +32,14 @@ def memoView(request):
     roadway_filter = request.GET.get('roadwayFilter', '')
     vehicle_type_filter = request.GET.get('vehicleTypeFilter', '')
     name_plate_filter = request.GET.get('namePlateFilter', '')
-
+    data=db.child('memos').get()
+    dataval=data.val()
+    context=dict()
+    sendData=dict()
+    keys=dataval.keys()
+    for key in keys:
+        sendData[key]=dataval[key]
+    context["users"]=sendData
     context = {
         'roadway_filter': roadway_filter,
         'vehicle_type_filter': vehicle_type_filter,

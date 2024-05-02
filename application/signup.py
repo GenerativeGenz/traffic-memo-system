@@ -3,7 +3,7 @@ import pyrebase
 import subprocess
 
 def submit_action():
-    firebaseconfig={
+    firebaseconfig = {
         "apiKey": "AIzaSyAqAg8PTWJSPXEsjeOOLPx-SiT0WOvnCIA",
         "authDomain": "traffic-memo-system-b842c.firebaseapp.com",
         "databaseURL": "https://traffic-memo-system-b842c-default-rtdb.firebaseio.com",
@@ -12,7 +12,7 @@ def submit_action():
         "messagingSenderId": "985582841078",
         "appId": "1:985582841078:web:08c7c00ea65f2dd06210d7",
         "measurementId": "G-JQ5TKGP6CN"
-    }   
+    }  
 
     firebase=pyrebase.initialize_app(firebaseconfig)
     db=firebase.database()

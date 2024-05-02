@@ -126,20 +126,6 @@ def verify(request):
           otp_entered=data['otp']
           data=db.child('admin').get()
           data2=data.val()
-          # import os
-          # os.system("cls")
-          # print(f"data2:{data2}")
-          # print(type(data2))
-          # keys=data2.keys()
-          # print(keys)
-          # # print(email1)
-          # for key in keys:
-          #      print(f"{data2[key]}\n\n")
-          # return render(request,"verify.html")
-               # if data2[key]['email']==email1:
-               #      name=data2[key]['name']
-               #      roadnm=data2[key]['roadnm']
-               #      role=data2[key]['role']
           for key,data_items in data2.items():
                if data_items['email']==email1:
                     name=data_items['name']

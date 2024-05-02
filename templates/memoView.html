@@ -22,10 +22,41 @@
           <option value="Truck" {% if vehicle_type_filter == 'Truck' %}selected{% endif %}>Truck</option>
           <option value="Motorcycle" {% if vehicle_type_filter == 'Motorcycle' %}selected{% endif %}>Motorcycle</option>
         </select>
-      
+
         <label>Name Plate:</label>
         <input type="text" id="namePlateFilter">
       </div>
-    {% include "table.html" %}
+      <table class="table table-hover table-bordered" id="memoTable">
+        <thead>
+          
+          <tr>
+            <th>Sr. no</th>
+            <th>Memos</th>
+            <th>Image link</th>
+            <th>Pdf link</th>
+            <th>Road name</th>
+            <th>Fine</th>
+            <th>Name</th>
+            <th>Plate no</th>
+            <th>Date and time</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          {% for key, item in memos.items %}
+          <tr>
+              <td>{{ forloop.counter }}</td>
+              <td>{{ item.email }}</td>
+              <td><a href={{ item.imageurl }} target="_blank">Open</a></td>
+              <td><a href={{ item.pdfurl }} target="_blank">Open</a></td>
+              <td>{{ item.roadnm }}</td>
+              <td>{{ item.fine }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.plateno }}</td>
+              <td>{{ item.dateandtime }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    
   </div>
 {% endblock memoView %}

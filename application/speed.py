@@ -20,15 +20,15 @@ def setparams(distance1,roadnm,speed):
 
 def main():
     global DISTANCE, SPEED_LIMIT
-    # DISTANCE = 10
-    # SPEED_LIMIT = 10
+    DISTANCE = 10
+    SPEED_LIMIT = 10
 
     #Define yolo model
     YOLO_MODEL = "yolov8s.pt"
 
     #Define video
     VIDEO = "traffic.mp4"
-    # VIDEO = "https://192.0.0.4:8080/video" # For live webcam from mobile
+    # VIDEO = "https://192.168.175.207:8080/video" # For live webcam from mobile
 
     model=YOLO(YOLO_MODEL)
 

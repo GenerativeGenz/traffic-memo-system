@@ -39,12 +39,14 @@ def memoView(request):
     keys=dataval.keys()
     for key in keys:
         sendData[key]=dataval[key]
-    context["users"]=sendData
+    # context["memos"]=sendData
     context = {
+        'memos': sendData,
         'roadway_filter': roadway_filter,
         'vehicle_type_filter': vehicle_type_filter,
         'name_plate_filter': name_plate_filter,
     }
+    print("context[memos] : ", context["memos"])
     return render(request=request, template_name='memoView.html', context=context)
 
 def userDetails(request):

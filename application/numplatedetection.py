@@ -39,5 +39,5 @@ def detect_numberplate(image):
     # if cv.waitKey(0) & 0xFF == ord('q'):
     #     cv.destroyAllWindows()  
 
-if __name__ == "main": 
-    detect_numberplate("cropped_22.jpg")
+# if __name__ == "main": 
+detect_numberplate("test.jpg")

@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def detect_numberplate(image):
-    numberplatecacade=cv.CascadeClassifier('haarcascade_russian_plate_number.xml')
+    numberplatecacade=cv.CascadeClassifier('model/haarcascade_russian_plate_number.xml')
 
     img=cv.imread(image)
     gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)

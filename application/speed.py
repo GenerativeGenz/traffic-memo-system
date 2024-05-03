@@ -24,10 +24,10 @@ def main():
     SPEED_LIMIT = 10
 
     #Define yolo model
-    YOLO_MODEL = "yolov8s.pt"
+    YOLO_MODEL = "model/yolov8s.pt"
 
     #Define video
-    VIDEO = "traffic.mp4"
+    VIDEO = "model/traffic.mp4"
     # VIDEO = "https://192.168.175.207:8080/video" # For live webcam from mobile
 
     model=YOLO(YOLO_MODEL)
@@ -42,7 +42,7 @@ def main():
 
     cap=cv2.VideoCapture(VIDEO)
 
-    my_file = open("coco.txt", "r")
+    my_file = open("model/coco.txt", "r")
     data = my_file.read()
     class_list = data.split("\n") 
     # print(class_list)

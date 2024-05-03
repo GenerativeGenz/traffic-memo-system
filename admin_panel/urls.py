@@ -10,4 +10,5 @@ urlpatterns = [
    path('verify',views.verify,name="verify"),
    path('login',views.login,name="login"),
    path('logout',views.logout,name="logout"),
+   path('request-password-change',views.reqPswdChng,name="passwordChange"),
 ]

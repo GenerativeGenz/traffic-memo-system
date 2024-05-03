@@ -166,3 +166,6 @@ def logout(request):
         request.session.pop('name')
         request.session.pop('roadnm')
         return redirect('/login')
+
+def reqPswdChng(request):
+    return render(request,"reqPasswordChange.html")

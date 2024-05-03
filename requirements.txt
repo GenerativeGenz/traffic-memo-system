@@ -1,0 +1,13 @@
+tkinter
+flask
+flask-mail
+firebase_admin
+pyrebase4
+pyshorteners
+twilio
+fpdf
+django
+django-jazzmin
+pandas
+ultralytics
+easyocr
